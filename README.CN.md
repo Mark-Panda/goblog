@@ -1,8 +1,10 @@
 # go-blog
 
-地址: [https://www.iphpt.com](https://www.iphpt.com)
+博客来源: [https://www.iphpt.com](https://www.iphpt.com)
 
-> 自己花了一些时间单独重构的!
+
+博客原作者：[https://github.com/izghua](https://github.com/izghua)
+
 
 ## 主要功能有:
 
@@ -40,3 +42,5 @@
  - [主页](http://localhost:8081/)
  - [管理后台注册](http://localhost:8081/backend/backend/register)
  - [管理后台登录](http://localhost:8081/backend/backend)
+
+ 

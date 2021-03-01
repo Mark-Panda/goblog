@@ -1,0 +1,1 @@
+nohup /root/goblog/blog >> /root/goblog/shellLog.log 2>&1 &
