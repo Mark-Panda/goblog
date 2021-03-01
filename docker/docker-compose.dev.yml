@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+
+  mysql:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: prisma
+    volumes:
+      - ../volumes/database_mysql-data:/var/lib/mysql
+    command: ["mysqld","--event-scheduler=ON"]
+  redis:
+    image: redis:latest
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    volumes:
+      - ../volumes/database_redis-data:/data
+    ports:
+      - "127.0.0.1:6379:6379"
+
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 192.100.0.0/16
+
